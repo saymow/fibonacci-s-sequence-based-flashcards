@@ -1,5 +1,7 @@
 <h1 align="center">:fire: Flash card Application :fire:</h1>
 
+![execution gif](https://github.com/saymow/Fibonnaci-s-sequence-based-Flashcards/blob/master/.github/React-App.gif)
+
 <br>
 
 ## 📋  About:
