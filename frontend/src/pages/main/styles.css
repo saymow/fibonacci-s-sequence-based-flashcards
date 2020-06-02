@@ -1,0 +1,186 @@
+.wrapperEl {
+  overflow: hidden;
+}
+
+.mainContainerEl {
+  width: 100%;
+  margin: auto;
+  margin-top: 10vh;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.noDecksContainerEl {
+  margin-top: 10vh;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.noDecksContainerEl div:first-child {
+  font-size: 3rem;
+  background-color: var(--color-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.createDeckEl {
+  margin: 5% auto;
+}
+
+.createDeckEl img {
+  cursor: pointer;
+  max-width: 100px;
+}
+
+.mainCarouselEl {
+  text-align: center;
+}
+
+.slick-current {
+  scale: 1.05;
+}
+
+.deckEl {
+  width: 100%;
+  max-width: 280px;
+  min-width: 220px;
+  background-color: var(--color-bg);
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 200ms ease;
+  cursor: pointer;
+  margin: 3rem 0;
+  box-shadow: 7px 7px 1px var(--color-txtSecondary);
+  color: var(--color-bg);
+}
+
+.deckEl span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.deckEl:focus-within {
+  transform: translateY(-10px) scale(1.1);
+  outline: none;
+}
+
+.deckInfoEl div button {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.ableDeckBtnEl {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+#practiceBtnEl {
+  height: 100%;
+  width: 100%;
+}
+
+.unableDeckBtnEl {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.ableDeckBtnEl a button, .unableDeckBtnEl a button {
+  font-weight: 600;
+  color: var(--color-bg);
+}
+
+.ableDeckBtnEl a button:hover, .unableDeckBtnEl a button:hover {
+  color: var(--color-Main);
+}
+
+.deckImgDivEl {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 100%;
+}
+
+.deckInfoEl {
+  display: flex;
+  flex-direction: column;
+}
+
+.deckInfoEl h1 {
+  line-height: 4rem;
+}
+
+.deckCurrentInfoEl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--color-Main);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.deckCurrentInfoEl div:nth-child(1) {
+  border-right: 1px solid var(--color-bg);
+}
+
+.deckCurrentInfoEl div p {
+  margin: 0.5rem 0;
+  color: var(--color-bg);
+}
+
+.deckCurrentInfoEl div span {
+  color: var(--color-bg);
+}
+
+.deckGearEl {
+  display: none;
+}
+
+.deckEl:focus .deckGearEl {
+  display: block;
+  position: absolute;
+  color: var(--color-bg);
+  top: 3px;
+  left: 3px;
+}
+
+.gearDeckDeleted {
+  position: absolute;
+  top: 40%;
+  right: 37%;
+}
+
+.deleted {
+  filter: brightness(20%);
+  transition: 200ms ease;
+}
+
+.deleted:focus:hover {
+  filter: brightness(30%);
+}
+
+.noHover {
+  pointer-events: none;
+}
+
+.slick-slide:focus {
+  outline: none;
+}
+
+@media (max-height: 590px) {
+  .createDeckEl {
+    margin: 0 auto;
+  }
+
+  .createDeckEl img {
+    max-width: 70px;
+  }
+}

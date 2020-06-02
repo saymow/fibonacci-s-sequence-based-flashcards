@@ -1,0 +1,41 @@
+#backCardOutputEl, #frontCardOutputEl{
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 1px var(--color-Main);
+  padding: 1em;
+}
+#backCardOutputEl p, #frontCardOutputEl p {
+  font-size: 24px;
+  word-wrap: break-word;
+}
+
+#backCardOutputEl p > span, #frontCardOutputEl p > span{
+  font-size: 24px;
+}
+
+#backCardOutputEl div{
+  width: 100%;
+  height: 100%;
+  transition: all 200ms;
+}
+
+.optionsPracticeCardEl{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.optionsPracticeCardEl div{
+  width: 80%;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.optionsPracticeCardEl button{
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+}
+

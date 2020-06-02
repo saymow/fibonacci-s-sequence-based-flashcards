@@ -1,0 +1,87 @@
+.authContainer{
+  max-width: 960px;
+  width: 100%;
+  height: 80vh;
+  margin: 10vh auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.authEl{
+  width: 100%;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem;
+  color: var(--color-txtSecondary);
+  font-size: 1.4rem;
+}
+
+.authEl a, span{
+  font-weight: bold;
+  color: var(--color-Main);
+  font-size: 1.2rem;
+}
+
+.authEl h2{
+  font-size: 3.2rem;
+  color: var(--color-txtPrimary);
+  font-weight: bold;
+}
+
+.authHeaderEl{
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.authHeaderEl a{
+  margin-left: 3px;
+}
+
+.authFormWrapperEl{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.authFormDivEl{
+  margin: .75rem 0 .75rem;
+}
+
+.authFormEl button {
+  margin-bottom: .5em;
+}
+
+.authInputEl{
+  width: 90%;
+}
+
+.authFooterEl p{
+  color: var(--color-txtSecondary);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 860px){
+  .carouselEl{
+    display: none;
+  }
+  .authContainer{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px){
+  .authFormWrapperEl{
+    width: 100%;
+  }
+  :root {
+    font-size: 50%;
+  }
+}

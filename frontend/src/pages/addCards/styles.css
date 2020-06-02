@@ -1,0 +1,56 @@
+.manageCardsContainerEl{
+  padding-top: 10vh;
+  width: 100%;
+  max-width: 1260px;
+  margin: auto;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 43% 43% 10%;
+  grid-template-areas: "front" "back" "options";
+  gap: .5rem;
+}
+
+.cardEl{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: .5rem;
+  margin: 0 auto;
+  font-size: 24px;
+}
+
+.cardEl h1{
+  width: 100%;
+  background-color: var(--color-bg);
+  margin-bottom: 0;
+  color: var(--color-Main);
+  box-shadow: 0 0 0 1px var(--color-Main);
+  border-bottom: none;
+  text-align: center;
+  font-size: 3rem;
+  padding: .5rem;
+}
+
+.frontCardEl{
+  grid-area: front;
+}
+
+.backCardEl{
+  grid-area: back;
+}
+
+.optionsAddCardEl{
+  grid-area: options;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.optionsAddCardEl button{
+  margin-left: 2rem;
+  border-radius: .5rem;
+}

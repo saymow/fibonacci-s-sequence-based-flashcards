@@ -1,0 +1,53 @@
+.dialogEl{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  max-width: 380px;
+  background-color: var(--color-bg);
+}
+
+.dialogEl h3{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dialogEl p{
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 1.5rem 0;
+}
+
+.dialogEl span{
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.dialogOptionsEl{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.neg button:nth-child(1){
+  background-color: green;
+}
+
+.neg button:nth-child(2){
+  background-color: #f00;
+}
+
+.pos button:nth-child(1){
+  background-color: #f00;
+}
+
+.pos button:nth-child(2){
+  background-color: green;
+}
+
+.dialogOptionsEl button:hover{
+  filter: brightness(80%); 
+  color: var(--color-bg);
+  border-color: var(--color-bg);
+}

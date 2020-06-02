@@ -1,0 +1,49 @@
+.deckFormEl{
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--color-Main);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+#deckManager{
+  padding: 3rem 2rem 1.5rem 2rem;
+}
+
+#deleteIcon{
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: 15px;
+  right: 15px;
+}
+
+.createDeckDivEl{
+  text-align: center;
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createDeckDivEl input{
+  width: 100%;
+}
+
+.createDeckDivEl p{
+  margin-bottom: 0;
+  font-size: 2rem;
+  margin-right: .5rem;
+}
+
+
+@media (max-width: 580px){
+  .deckFormEl{
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,27 @@
+#inputErrorDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#react-error-icon > svg > path{
+  color: rgb(197, 15, 15);
+}
+
+#react-error-icon::after{
+  position: absolute;
+  display: block;
+  content: attr(data-tooltip);
+  background-color: var(--color-txtSecondary);
+  color: var(--color-bg);
+  font-size: 1.2rem;
+  transform: translate(-60%, -100%) scale(0);
+  padding: .5rem 1rem;
+  border-radius: 5%;
+  transition: transform 200ms ease;
+}
+
+#react-error-icon:hover::after{
+  transform: translate(-100%, -140%) scale(1);
+}

@@ -1,0 +1,26 @@
+.d-block{
+  background: no-repeat center center scroll;
+  background-size: cover;
+  height: 80vh;
+  min-height: 350px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.carouselCaptionEl{
+  text-align: left;
+}
+
+.carouselCaptionEl > p, .carouselCaptionEl > h3{
+  color: #fff;
+}
+
+.carouselCaptionEl h3{
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+.carousel-indicators li {
+  padding: 0;
+}

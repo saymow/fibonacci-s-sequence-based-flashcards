@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+:root {
+  /* Equivalent to 10px */
+  font-size: 62.5%;
+}
+
+html {
+  --color-Main: #710a88;
+  --color-Secondary: rgb(230, 230, 230);
+  --color-bg: #fff;
+  --color-txtPrimary: #000;
+  --color-txtSecondary: #888;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-txtPrimary);
+}
+
+body {
+  background-color: var(--color-Secondary);
+  font-size: 1.6rem;
+}
+
+button {
+  background-color: var(--color-Main);
+  color: #fff;
+  padding: 0.5em 1em;
+  border: 1px solid var(--color-bg);
+  outline: none;
+  transition: all 200ms ease;
+}
+
+button:hover {
+  background-color: var(--color-bg);
+  color: var(--color-Main);
+  border: 1px solid var(--color-Main);
+}
+
+button:focus {
+  outline: none;
+}
+
+input,
+select,
+option {
+  color: var(--color-txtPrimary);
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid var(--color-Secondary);
+  background-color: var(--color-Secondary);
+}
+
+input::placeholder{
+  color: var(--color-txtPrimary);
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+
