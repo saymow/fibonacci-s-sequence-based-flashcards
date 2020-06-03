@@ -8,7 +8,7 @@
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;This was my final project at <a href="https://cs50.harvard.edu/x/2020/">CS50</a> course and my first solo "big" application, so i used many libraries in order to learn them. <strong>Its definitely not completly done</strong>, so i'm going to maintain it, below has a <strong>to-do</strong> topic.</p>
 
-## :rocket: Main tecnologies used:
+## :rocket: Main technologies used:
 
 ### Frontend
 
