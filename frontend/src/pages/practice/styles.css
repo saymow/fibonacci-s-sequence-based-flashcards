@@ -1,26 +1,34 @@
-#backCardOutputEl, #frontCardOutputEl{
+#backCardOutputEl,
+#frontCardOutputEl {
   overflow: auto;
   width: 100%;
   height: 100%;
   box-shadow: 0 0 0 1px var(--color-Main);
   padding: 1em;
+  color: unset;
 }
-#backCardOutputEl p, #frontCardOutputEl p {
+#backCardOutputEl p,
+#frontCardOutputEl p {
   font-size: 24px;
   word-wrap: break-word;
 }
 
-#backCardOutputEl p > span, #frontCardOutputEl p > span{
+#backCardOutputEl p > span,
+#frontCardOutputEl p > span,
+#backCardOutputEl p > span strong,
+#frontCardOutputEl p > span strong {
+  color: unset;
+
   font-size: 24px;
 }
 
-#backCardOutputEl div{
+#backCardOutputEl div {
   width: 100%;
   height: 100%;
   transition: all 200ms;
 }
 
-.optionsPracticeCardEl{
+.optionsPracticeCardEl {
   margin: auto;
   display: flex;
   align-items: center;
@@ -28,14 +36,13 @@
   width: 90%;
 }
 
-.optionsPracticeCardEl div{
+.optionsPracticeCardEl div {
   width: 80%;
   justify-content: space-evenly;
   display: flex;
 }
 
-.optionsPracticeCardEl button{
-  border-radius: .5rem;
-  padding: .5rem 1rem;
+.optionsPracticeCardEl button {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
 }
-

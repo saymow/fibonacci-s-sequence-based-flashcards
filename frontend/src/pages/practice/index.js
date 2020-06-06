@@ -163,17 +163,17 @@ export default function Practice(props) {
                   <button onClick={() => setOption("nHard")}>
                     1min
                     <br />
-                    nHard
+                    Hard
                   </button>
                   <button onClick={() => setOption("nGood")}>
                     10min
                     <br />
-                    nGood
+                    Good
                   </button>
                   <button onClick={() => setOption("nEasy")}>
                     1d
                     <br />
-                    nEasy
+                    Easy
                   </button>
                 </div>
               ) : (
@@ -181,17 +181,17 @@ export default function Practice(props) {
                   <button onClick={() => setOption("nHard")}>
                     10min
                     <br />
-                    nHard
+                    Hard
                   </button>
                   <button onClick={() => setOption("good")}>
                     1d
                     <br />
-                    nGood
+                    Good
                   </button>
                   <button onClick={() => setOption("easy")}>
                     2d
                     <br />
-                    nEasy
+                    Easy
                   </button>
                 </div>
               )
