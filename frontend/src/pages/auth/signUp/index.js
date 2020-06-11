@@ -49,7 +49,7 @@ export default function SignUp() {
           .required("Password is necessary.")
           .min(8, "Password is too weak")
           .max(16, "Password too loong.")
-          .matches(/[A-Z][a-z][\d]/, "Password must have capitalized,\n non capitalized letters and numbers."),
+          .matches(/[A-Za-z\d]/g, "Password must have capitalized,\n non capitalized letters and numbers."),
 
         passwordMatch: Yup.string()
           .required("Confirm password is necessary.")
