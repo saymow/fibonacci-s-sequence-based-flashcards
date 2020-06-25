@@ -4,6 +4,7 @@ import React, {
   useImperativeHandle,
   useState,
   useEffect,
+  useCallback,
 } from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
 import ModalDefault from "../createModal";
@@ -208,39 +209,38 @@ export const CancelDeleteDeck = forwardRef((props, ref) => {
   const [dialog, setOpenDialog] = useState(false);
   const [deadline, setDeadline] = useState(0);
   const [timer, setTimer] = useState({ h: 0, m: 0, s: 0 });
-  const [interv, setInterv] = useState(0);
   const { apiRetrieveDeck, render } = props;
+  let interv = useRef();
+
 
   async function retrieveHandler() {
     await apiRetrieveDeck(deckId);
     render();
   }
 
-  useEffect(() => {
-    if (dialog) {
-      countDown();
-      setInterv(setInterval(countDown, 1000));
-    } else {
-      clearInterval(interv);
-    }
-    // useMemo probably would resolve this problem.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dialog]);
-
-  const countDown = () => {
+  const countDown = useCallback(() => {
     let newDate = new Date(deadline - Date.now(0));
-  
+
     // getUTCHours instead of getHours because it bypasses any timezone offset
     let h = String(newDate.getUTCHours());
     let m = String(newDate.getMinutes());
     let s = String(newDate.getSeconds());
-      
+
     setTimer({
       h: h.length === 1 ? "0" + h : h,
       m: m.length === 1 ? "0" + m : m,
       s: s.length === 1 ? "0" + s : s,
     });
-  }
+  }, [deadline]);
+
+  useEffect(() => {
+    if (dialog) {
+      countDown();
+      interv.current = setInterval(countDown, 1000);
+    } else {
+      return clearInterval(interv.current);
+    }
+  }, [countDown, dialog, interv]);
 
   useImperativeHandle(ref, () => {
     return {
