@@ -67,11 +67,27 @@ module.exports = database;
 //   CONSTRAINT `decks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 // ) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8
 
-// CREATE TABLE `users` (
+// CREATE TABLE `cards` (
+//   `deck_id` int DEFAULT NULL,
 //   `id` int NOT NULL AUTO_INCREMENT,
-//   `name` varchar(255) NOT NULL,
-//   `username` varchar(36) NOT NULL,
-//   `email` varchar(320) NOT NULL,
-//   `password` varchar(60) NOT NULL,
-//   PRIMARY KEY (`id`)
-// ) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8
+//   `front_side` varchar(5000) DEFAULT NULL,
+//   `back_side` varchar(5000) DEFAULT NULL,
+//   `is_new` tinyint(1) DEFAULT NULL,
+//   `logx` smallint DEFAULT NULL,
+//   `logy` smallint DEFAULT NULL,
+//   `due_date` date DEFAULT NULL,
+//   PRIMARY KEY (`id`),
+//   KEY `deck_id` (`deck_id`),
+//   CONSTRAINT `cards_ibfk_1` FOREIGN KEY (`deck_id`) REFERENCES `decks` (`id`)
+// ) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8
+
+
+// SQL EVENT DO DELETE MARKED CARDS
+
+// CREATE DEFINER=`root`@`localhost` 
+// EVENT `autoDeleteCards` 
+// ON SCHEDULE EVERY 1 MINUTE 
+// STARTS '2020-05-23 20:25:02' ON COMPLETION NOT PRESERVE ENABLE 
+// COMMENT 'Delete cards' 
+//   DO 
+// DELETE FROM my_db.decks WHERE deleted < NOW()
