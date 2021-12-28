@@ -104,7 +104,7 @@
 
 <p><strong>Easy</strong>: This option set the next revision to (5 + 2 * 8) = 21 days, this way setting the log to [13, 21], which means that the user skip the 7° round and goes straight forward to the 8° round.</p>
 
-<p><strong>Good</strong>: This option is the obvious one, the user just keep the fibonnacci frequence and the next revision time is set to (5 + 8) = 13 days. Therefore setting the log to [8,13].</p>
+<p><strong>Good</strong>: This option is the obvious one, the user just keep the fibonacci frequence and the next revision time is set to (5 + 8) = 13 days. Therefore setting the log to [8,13].</p>
 
 <p><strong>Hard</strong>: The last one, just keep the log the same it is, meaning that the user doesnt evolved this card.</p>
 
